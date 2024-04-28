@@ -1,0 +1,23 @@
+import sys
+import os
+
+# 获取当前脚本文件所在目录的绝对路径
+current_path = os.path.abspath(os.path.dirname(__file__))
+
+# 将上级目录路径添加到搜索路径
+parent_path = os.path.abspath(os.path.join(current_path, os.pardir))
+sys.path.append(parent_path)
+
+# 将本级目录路径添加到搜索路径
+sys.path.append(current_path)
+
+
+# from shape.geometry3d import Geometry3D
+# from shape.plane import Plane
+# from shape.sphere import Sphere
+# from shape.capsule import Capsule
+# from shape.brick import Brick
+# from shape.circle import Circle
+# from shape.cylinder import Cylinder
+# from shape.circle2d import Circle2D
+# from shape.ellipsoid import Ellipsoid
